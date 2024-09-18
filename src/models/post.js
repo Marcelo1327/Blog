@@ -1,8 +1,7 @@
 const mongoose = require('mongoose')
 
 const postSchema = mongoose.Schema({
-    title: {type: String, required: true},
-    date: new Date().format('DD/MM/YYYY'),
+    title: {type: String},
     content: {type: String, required: true}
 })
 

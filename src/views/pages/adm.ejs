@@ -1,0 +1,54 @@
+
+<%- include('../layouts/header', {title: 'TecnoBlog'}) %>   
+<main id="home">
+        <h2>Gerenciar Postagens</h2>
+        <a href="/adm/new" class="create"><button class="create">Novo</button></a>
+        <% post.forEach(post => {%>
+            <div class="postagem">
+                <%-post.content.substring(0, 250)%>
+                <a href="/<%= post._id %>">Ver Mais</a>
+                <button class="delete" id="<%= post.id %>">Excluir</button>
+                <a href="adm/<%= post.id %>/edit" ><button class="edit">Editar</button></a>
+            </div>
+        <% }) %>
+        <dialog id="conf">
+            
+            <h2>Deseja realmente excluir?</h2>
+            <button class="cancel" onclick="closeModal()">Cancelar</button>
+            <a href="" class="confirm"><button class="save">Confirmar</button></a>
+        </dialog>
+    </main>
+
+    <script>
+        const buttonsDelete = document.querySelectorAll(".delete")
+        const buttonConfirm = document.querySelector('.confirm')
+        const modal = document.getElementById('conf')
+
+        buttonsDelete.forEach( button => {
+            button.addEventListener( 'click', (ev) => {
+                const buttonClick = ev.target
+                const scrollPosition = window.scrollY || window.pageYOffset;
+                const windowHeight = window.innerHeight;
+                const modalHeight = modal.offsetHeight;
+                
+                const postId = buttonClick.id
+
+                buttonConfirm.href = `adm/${postId}?_method=delete`
+
+    
+                const topPosition = scrollPosition + (windowHeight - modalHeight) / 2;
+                modal.style.display = "block"
+                modal.style.top = `${topPosition}px`;
+                modal.showModal()
+                
+            })
+
+        
+        })
+ 
+        function closeModal() {
+            modal.close()
+        }
+    </script>
+
+<%- include('../layouts/footer') %>

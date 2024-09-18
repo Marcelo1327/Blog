@@ -1,0 +1,310 @@
+:root{
+    --blue-color: #221EEb
+
+}
+
+*{
+    margin: 0;
+
+}
+
+body {
+    background-color: #f0f0f0;
+    background-size: cover;
+}
+
+header {
+    background-color: var(--blue-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+ 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+    color: #ff6347;
+}
+
+/* header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-color);
+    padding: .5rem;
+} */
+
+
+#meu-editor {
+    display: flex;
+}
+
+.postagem{
+    width: 50rem;
+    margin: .5rem;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+main > h2{
+    text-align: left;
+}
+
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+#show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#home > a {
+    color: aliceblue;
+    border: 1px solid;
+    padding: 1px;
+    color: #007bff; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.3s ease;
+}
+
+
+#home a:hover {
+    color: #0056b3; /* Cor do link ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+#home a:visited {
+    color: #551a8b; /* Cor do link visitado */
+}
+
+#home a:active {
+    color: #ff0000; /* Cor do link ao ser clicado */
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 28px;
+    color: #444;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+
+h3 {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 24px;
+    color: #555;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+li {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    list-style-type: none; /* Remove o marcador padrão */
+}
+
+li::before {
+    content: '•'; /* Adiciona um marcador personalizado */
+    color: #007bff; /* Cor do marcador */
+    font-size: 20px; /* Tamanho do marcador */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.save {
+    background-color: #28a745;
+    color: #fff;
+}
+
+button.save:hover {
+    background-color: #218838;
+}
+
+button.cancel {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+button.cancel:hover {
+    background-color: #c82333;
+}
+
+#conf {
+  
+    align-content: center;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 50;
+    text-align: center;
+    align-items: center;
+}
+
+/* Estilo para o título do modal */
+#conf h2 {
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 20px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Estilo para os botões do modal */
+#conf-buttons {
+    display: block;
+    justify-content: space-around;
+}
+
+/* a.button {
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 10px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado */
+    /* transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */ 
+
+button.edit {
+    padding: 5px 10px;
+    background-color: #ffc107; /* Cor do botão de editar */
+    color: #fff;
+}
+
+button.edit:hover {
+    background-color: #e0a800; /* Cor ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button.delete {
+    padding: 5px 10px;
+    background-color: #dc3545; /* Cor do botão de excluir */
+    color: #fff;
+    
+}
+
+button.delete:hover {
+    background-color: #c82333; /* Cor ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+a.create, button.create {
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado */
+    background-color: #28a745; /* Cor do botão de criar */
+    color: #fff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    right: 20px; /* Distância da borda direita */
+    bottom: 20px; /* Distância da borda inferior */
+}
+
+button.create:hover {
+    background-color: #218838; /* Cor ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+    background-color: var(--blue-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    z-index: -1;
+}

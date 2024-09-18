@@ -1,0 +1,12 @@
+<%- include('../layouts/header', {title: 'TecnoBlog'}) %>
+    <main id="home">
+        <h2>Postagens</h2>
+            <% post.forEach(post => {%>
+                <div class="postagem">
+                    <%-post.content.substring(0, 250)%>
+                    <a href="/<%- post._id %>">Ver Mais</a>
+                </div>
+            <% }) %>               
+    </main>
+
+<%- include('../layouts/footer') %>

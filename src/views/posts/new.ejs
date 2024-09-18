@@ -1,0 +1,20 @@
+
+<%- include('../layouts/header', {title: 'TecnoBlog'}) %>
+
+<section class="action">
+    <div class="container">
+        <h1 class="title size-4"> Nova postagem</h1>
+
+        <%- include('../posts/form', { url: '/adm/new?_method=post'},  {post : post}) %>
+    </div>
+</section>
+    <script>
+        // Inicialize o CKEditor na textarea
+        ClassicEditor
+            .create(document.querySelector('#meu-editor'))
+            .catch(error => {
+                console.error(error);
+            })
+            
+    </script>
+<%- include('../layouts/footer') %>
